@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context/
+  http://www.springframework.org/schema/context/spring-context.xsd">
+
+   <!-- <bean id="fb" class="indhu.org.Football"></bean>
+  <bean id="football" class="indhu.org.Game" autowire="byType">
+  </bean> -->
+ 
+  <!--  <bean id="obj" class="indhu.org.A"></bean> --> 
+    <bean id="obj" class="indhu.org.Validator"></bean> 
+   <bean id="ba" class="indhu.org.BeforeAdvisor"></bean> 
+   <bean id="AA" class="indhu.org.AfterAdvisor"></bean> 
+    <bean id="AD" class="indhu.org.AroundAdvisor"></bean>
+    <bean id="Th" class="indhu.org.ThrowsAdvisor"></bean> 
+  
+ <bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">  
+<property name="target" ref="obj"></property>  
+<property name="interceptorNames">  
+<list>  
+ <!-- <value>ba</value> 
+ <value>AA</value>   -->
+ <value>AD</value>
+ <value>Th</value> 
+</list>  
+</property>  
+</bean>  
+</beans>
+
