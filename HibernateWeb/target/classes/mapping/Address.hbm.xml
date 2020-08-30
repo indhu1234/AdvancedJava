@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="model.AddressTable" table="ADDRESSTABLE">
+      <id name="addressId" type="integer">
+            <column name="ADDRESSID" length="40" />
+            <generator class="native" />
+        </id>
+        <property name="streetNo" type="string">
+            <column name="STREETNO" length="20" />
+        </property>
+        <property name="lane" type="string">
+            <column name="LANE" length="20" />
+        </property>
+        <property name="city" type="string">
+            <column name="CITY" length="20" />
+        </property>
+        <property name="state" type="string">
+            <column name="STATE" length="20" />
+        </property>
+        <property name="zipCode" type="integer">
+            <column name="ZIPCODE" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>
