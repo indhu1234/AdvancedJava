@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.grantuniversity.model.Course" table="COURSETABLE">
+      <id name="courseId" type="integer">
+            <column name="COURSEID" length="40" />
+            <generator class="native" />
+        </id>
+        <property name="courseName" type="string">
+            <column name="COURSENAME" length="20" />
+        </property>
+        <property name="courseDuration" type="string">
+            <column name="COURSEDURATION" length="20" />
+        </property>
+        <property name="courseEligiblity" type="string">
+            <column name="COURSEELIGIBLITY" length="20" />
+        </property>
+        <property name="courseFee" type="double">
+            <column name="COURSEFEE" length="20" />
+        </property>
+        
+    </class>
+</hibernate-mapping>
